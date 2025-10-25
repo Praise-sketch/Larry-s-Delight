@@ -1,0 +1,64 @@
+import React from 'react'
+import ProductCard from '../components/ProductCard'
+
+const products = [
+  {
+    id: 'p1',
+    name: 'Mango Bliss',
+    description: 'Juicy mangoes blended to perfection. No preservatives.',
+    price: '$3.50',
+    image: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0d0d7f6ba7e0f7b1d2d7b0c6a2b5e1c3'
+  },
+  {
+    id: 'p2',
+    name: 'Citrus Sunrise',
+    description: 'Orange, lemon and a touch of ginger.',
+    price: '$3.25',
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b08b8b9d0d6d8c3a2b7c8d5e6f4a1b2'
+  },
+  {
+    id: 'p3',
+    name: 'Berry Zing',
+    description: 'Mixed berries with a bright tangy flavor.',
+    price: '$3.75',
+    image: 'https://images.unsplash.com/photo-1542444459-db4f3c5d4b1f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b3f8c6c3f6c2a1a80f8b3a2f6e4d2c5'
+  },
+  {
+    id: 'p4',
+    name: 'Green Detox',
+    description: 'Refreshing cucumber and apple blend.',
+    price: '$4.00',
+    image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=aa2f6b68a2d9b3f4e5a2b1c3d4e5f6a7'
+  },
+  {
+    id: 'p5',
+    name: 'Pineapple Punch',
+    description: 'Sweet pineapple with a tropical twist.',
+    price: '$3.80',
+    image: 'https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b9a1b8a3e2d4c5f6a7b8c9d0e1f2a3b'
+  },
+  {
+    id: 'p6',
+    name: 'Apple & Cinnamon',
+    description: 'Comforting apple flavor with warm cinnamon notes.',
+    price: '$3.60',
+    image: 'https://images.unsplash.com/photo-1514512364185-0b7ae2a16f1f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4c3b2a1d0f5e6a7b8c9d0e1f2a3b4c5d'
+  }
+]
+
+export default function Products() {
+  return (
+    <section className="py-12">
+      <div className="container">
+        <h2 className="text-3xl font-semibold">Our Products</h2>
+        <p className="text-gray-600 mt-2">Explore our range of healthy fruit drinks.</p>
+
+        <div className="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map(p => (
+            <ProductCard key={p.id} product={p} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
